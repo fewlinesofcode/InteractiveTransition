@@ -8,30 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		A50F5B921FC8789300BBD024 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50F5B911FC8789300BBD024 /* MasterViewController.swift */; };
-		A50F5B951FC87F6400BBD024 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50F5B941FC87F6400BBD024 /* ContainerViewController.swift */; };
-		A53BE0B21FA790630050F8E2 /* PresentAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53BE0B11FA790630050F8E2 /* PresentAnimator.swift */; };
 		A54947341FA6140B00B913D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54947331FA6140B00B913D3 /* AppDelegate.swift */; };
 		A54947391FA6140B00B913D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54947371FA6140B00B913D3 /* Main.storyboard */; };
 		A549473B1FA6140B00B913D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A549473A1FA6140B00B913D3 /* Assets.xcassets */; };
 		A549473E1FA6140B00B913D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A549473C1FA6140B00B913D3 /* LaunchScreen.storyboard */; };
-		A54947461FA614E600B913D3 /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54947451FA614E600B913D3 /* DismissAnimator.swift */; };
-		A54947481FA6155900B913D3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54947471FA6155900B913D3 /* DetailViewController.swift */; };
-		A549474A1FA61CDA00B913D3 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54947491FA61CDA00B913D3 /* Interactor.swift */; };
+		A54947481FA6155900B913D3 /* CardNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54947471FA6155900B913D3 /* CardNavigationController.swift */; };
+		CE7CA298218B44720010CE36 /* CardPresentingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CA297218B44720010CE36 /* CardPresentingAnimator.swift */; };
+		CE7CA29A218B44810010CE36 /* CardDismissingAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CA299218B44810010CE36 /* CardDismissingAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A50F5B911FC8789300BBD024 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		A50F5B941FC87F6400BBD024 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
-		A53BE0B11FA790630050F8E2 /* PresentAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentAnimator.swift; sourceTree = "<group>"; };
 		A54947301FA6140B00B913D3 /* InteractiveTransitions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveTransitions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54947331FA6140B00B913D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A54947381FA6140B00B913D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A549473A1FA6140B00B913D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A549473D1FA6140B00B913D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A549473F1FA6140B00B913D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A54947451FA614E600B913D3 /* DismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
-		A54947471FA6155900B913D3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		A54947491FA61CDA00B913D3 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		A54947471FA6155900B913D3 /* CardNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardNavigationController.swift; sourceTree = "<group>"; };
+		CE7CA297218B44720010CE36 /* CardPresentingAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPresentingAnimator.swift; sourceTree = "<group>"; };
+		CE7CA299218B44810010CE36 /* CardDismissingAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDismissingAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,8 +44,8 @@
 		A50F5B931FC8796E00BBD024 /* Animators */ = {
 			isa = PBXGroup;
 			children = (
-				A54947451FA614E600B913D3 /* DismissAnimator.swift */,
-				A53BE0B11FA790630050F8E2 /* PresentAnimator.swift */,
+				CE7CA297218B44720010CE36 /* CardPresentingAnimator.swift */,
+				CE7CA299218B44810010CE36 /* CardDismissingAnimator.swift */,
 			);
 			path = Animators;
 			sourceTree = "<group>";
@@ -79,10 +75,8 @@
 				A549473A1FA6140B00B913D3 /* Assets.xcassets */,
 				A549473C1FA6140B00B913D3 /* LaunchScreen.storyboard */,
 				A549473F1FA6140B00B913D3 /* Info.plist */,
-				A54947471FA6155900B913D3 /* DetailViewController.swift */,
-				A54947491FA61CDA00B913D3 /* Interactor.swift */,
+				A54947471FA6155900B913D3 /* CardNavigationController.swift */,
 				A50F5B931FC8796E00BBD024 /* Animators */,
-				A50F5B941FC87F6400BBD024 /* ContainerViewController.swift */,
 			);
 			path = InteractiveTransitions;
 			sourceTree = "<group>";
@@ -114,11 +108,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Oleksandr Glagoliev";
 				TargetAttributes = {
 					A549472F1FA6140B00B913D3 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -160,12 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50F5B921FC8789300BBD024 /* MasterViewController.swift in Sources */,
-				A54947461FA614E600B913D3 /* DismissAnimator.swift in Sources */,
-				A50F5B951FC87F6400BBD024 /* ContainerViewController.swift in Sources */,
+				CE7CA298218B44720010CE36 /* CardPresentingAnimator.swift in Sources */,
 				A54947341FA6140B00B913D3 /* AppDelegate.swift in Sources */,
-				A549474A1FA61CDA00B913D3 /* Interactor.swift in Sources */,
-				A53BE0B21FA790630050F8E2 /* PresentAnimator.swift in Sources */,
-				A54947481FA6155900B913D3 /* DetailViewController.swift in Sources */,
+				CE7CA29A218B44810010CE36 /* CardDismissingAnimator.swift in Sources */,
+				A54947481FA6155900B913D3 /* CardNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +198,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -212,6 +206,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -262,6 +257,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -269,6 +265,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -303,12 +300,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P44F5PA4BT;
+				DEVELOPMENT_TEAM = MNMJQD8U9P;
 				INFOPLIST_FILE = InteractiveTransitions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.limlab.InteractiveTransitions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -318,12 +315,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = P44F5PA4BT;
+				DEVELOPMENT_TEAM = MNMJQD8U9P;
 				INFOPLIST_FILE = InteractiveTransitions/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.limlab.InteractiveTransitions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
