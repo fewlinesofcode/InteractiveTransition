@@ -15,11 +15,8 @@ class CardNavigationController: UINavigationController {
     fileprivate var shouldFinish = false
     
     var cornerRadius: CGFloat = 10
-    
-    var initialFrameForAppearingViewController = CGRect(x: 0, y: UIScreen.main.bounds.height - 44, width: UIScreen.main.bounds.width, height: 44)
-    var finalFrameForDisappearingViewController = UIScreen.main.bounds.offsetBy(dx: 0, dy: UIScreen.main.bounds.height)
-    var finalFrameForAppearingViewController = UIScreen.main.bounds.offsetBy(dx: 0, dy: 100)
-    var animationDuration: TimeInterval = 0.3
+    var animationDuration: TimeInterval = 0.5
+    let presentedViewOffsetTop: CGFloat = 50
     
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
@@ -30,7 +27,7 @@ class CardNavigationController: UINavigationController {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         transitioningDelegate = self
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         transitioningDelegate = self
@@ -76,11 +73,17 @@ class CardNavigationController: UINavigationController {
 
 extension CardNavigationController: UIViewControllerTransitioningDelegate {
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CardDismissingAnimator(duration: animationDuration, finalFrame: finalFrameForDisappearingViewController, cornerRadius: cornerRadius)
+        let finalFrame = dismissed.view.bounds.offsetBy(dx: 0, dy: dismissed.view.bounds.height)
+        return CardDismissingAnimator(duration: animationDuration, finalFrame: finalFrame, cornerRadius: cornerRadius)
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CardPresentingAnimator(duration: animationDuration, initialFrame: initialFrameForAppearingViewController, finalFrame: finalFrameForAppearingViewController, cornerRadius: cornerRadius)
+        let initialFrame = presenting.view.bounds.offsetBy(dx: 0, dy: presenting.view.bounds.maxY)
+        let finalFrame = presenting.view.bounds.offsetBy(dx: 0, dy: presentedViewOffsetTop)
+        return CardPresentingAnimator(duration: animationDuration,
+                                      initialFrame: initialFrame,
+                                      finalFrame: finalFrame,
+                                      cornerRadius: cornerRadius)
     }
     
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
